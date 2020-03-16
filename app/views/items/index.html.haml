@@ -1,0 +1,8 @@
+.main
+  = link_to "トップページ", root_path, class:"btn-top"
+  - @items.each do |item|
+    .item
+      .item__category
+        = item.category.name
+      .item__name
+        = item.thing
