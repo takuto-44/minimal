@@ -1,0 +1,5 @@
+.item
+  = form_with model: @item, url: homes_path, class: 'form', local: true do |f|
+    = f.collection_select :category_id, Category.all, :id, :name, include_blank: '--', class: 'form__select'
+    = f.text_field :thing, placeholder: :アイテム名, value: "", class: 'form__title'
+    = f.submit '投稿する', class: 'form__btn'
