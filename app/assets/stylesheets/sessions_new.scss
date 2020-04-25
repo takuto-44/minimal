@@ -1,0 +1,12 @@
+.checkbox {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  input#user_remember_me {
+    width: 30px;
+  }
+  label {
+    margin-top: 10px;
+  }
+}

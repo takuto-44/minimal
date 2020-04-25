@@ -1,7 +1,6 @@
 class HomesController < ApplicationController
 
   def index
-    
   end
 
   def new_guest
@@ -15,15 +14,26 @@ class HomesController < ApplicationController
 
   def new
     @item = Item.new
+    @item.images.new
   end
 
   def create
-    Item.create(item_params)
-    redirect_to root_path
+    @item = Item.new(item_params)
+    if @item.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
   end
 
   private
+
   def item_params
-    params.require(:item).permit(:category_id, :thing)
+    params.require(:item).permit(:category_id, :thing, images_attributes: [:image])
   end
 end
