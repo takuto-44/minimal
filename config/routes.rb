@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   post '/users/sign_up', to: 'devise/registrations#new'
   post '/homes/guest_sign_in', to: 'homes#new_guest'
-  resources :homes, only: [:new, :create]
+  resources :homes, only: [:new, :create, :destroy]
   resources :items, only: [:index]
 
 end

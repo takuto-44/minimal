@@ -1,8 +1,12 @@
-.main
-  = link_to "トップページ", root_path, class:"btn-top"
-  - @items.each do |item|
-    .item
-      .item__category
-        = item.category.name
-      .item__name
-        = item.thing
+.view
+  .view__title
+    = link_to "MY LIST", root_path, class:"btn-top"
+  .view__list
+    - @items.each do |item|
+      .view__list__box
+        .view__list__box__category
+          = item.category.name
+        .view__list__box__name
+          = item.thing
+        .view__list__box__delete
+          = link_to '削除', "/homes/#{item.id}", method: :delete, class: 'btn-delete'
