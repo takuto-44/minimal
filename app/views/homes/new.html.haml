@@ -5,5 +5,7 @@
     = f.collection_select :category_id, Category.all, :id, :name, include_blank: '--', class: 'item__form__select'
     = f.text_field :thing, placeholder: :アイテム, value: "", class: 'item__form__title'
     = f.fields_for :images do |ff|
-      = ff.file_field :image, class: 'item__form__image'
+      = ff.label :image, class: 'item__form__label' do
+        = icon('fas', 'image', class: 'icon')
+        = ff.file_field :image, class: 'item__form__image'
     = f.submit '投稿する', class: 'item__form__btn'
