@@ -3,7 +3,7 @@
 lock '3.12.0'
 
 # Capistranoのログの表示に利用する
-set :application, 'minimal'
+set :application, 'MINIMAL'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:takuto-44/minimal.git'
