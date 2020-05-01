@@ -1,3 +1,10 @@
+# MINIMAL
+## concept
+## 「ライフスタイルをミニマルに。〜いらない物をリスト化しよう！〜」
+![スクリーンショット 2020-04-27 11 11 57](https://user-images.githubusercontent.com/59508944/80783538-153ecc80-8bb5-11ea-8e7a-f1231f95410b.png)
+
+## Takuto Hoshi
+
 ## users table
 
 |Column|Type|Options|
