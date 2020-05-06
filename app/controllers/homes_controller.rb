@@ -14,13 +14,12 @@ class HomesController < ApplicationController
 
   def new
     @item = Item.new
-    @item.images.new
   end
 
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to root_path
+      redirect_to items_path
     else
       render :new
     end
@@ -34,6 +33,6 @@ class HomesController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:category_id, :thing, images_attributes: [:image])
+    params.require(:item).permit(:category_id, :thing, :image).merge(user_id: current_user.id)
   end
 end

@@ -2,14 +2,13 @@
   .view__title
     = link_to "MY LIST", root_path, class:"btn-top"
   .view__list
-    - @items.each do |item|
+    - current_user.items.each do |item|
       .view__list__box
         .view__list__box__category
           = item.category.name
         .view__list__box__name
           = item.thing
-        .view__list__box__delete
-          = link_to '削除', "/homes/#{item.id}", method: :delete, class: 'btn-delete'
-  -# .view__pic
-  -#   - @items.images.each do |image|
-  -#     = image_tag image.image.url
+      .view__list__image
+        = image_tag item.image.url, class: 'btn-image' if item.image.present?
+      .view__list__delete
+        = link_to '削除', "/homes/#{item.id}", method: :delete, class: 'btn-delete'

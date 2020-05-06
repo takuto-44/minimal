@@ -76,4 +76,5 @@ gem 'active_hash'
 gem "font-awesome-sass"
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'nested_form'
+gem 'fog-aws'
+gem 'pry-rails'
