@@ -10,8 +10,8 @@
 簡易アカウント作成、ログイン機能付きです。
 
 ## Made by Takuto Hoshi
-- ![Twitter](https://twitter.com/takuto_44)
-- ![Blog](http://takuto44.hatenablog.com)
+- [Twitter](https://twitter.com/takuto_44)
+- [Blog](http://takuto44.hatenablog.com)
 
 ## users table
 
