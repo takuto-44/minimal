@@ -1,6 +1,6 @@
-.item
-  .item__title
-    = link_to "MINIMAL", root_path, class:"btn-title"
+.list
+  .list__title
+    = link_to "MY LIST", root_path, class:"btn-top"
   = form_with model: @item, url: homes_path, class: 'item__form', local: true do |f|
     = f.collection_select :category_id, Category.all, :id, :name, include_blank: '--', class: 'item__form__select'
     = f.text_field :thing, placeholder: :アイテム, value: "", class: 'item__form__title'
