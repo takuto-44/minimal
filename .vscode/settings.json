@@ -1,0 +1,4 @@
+{
+  "maven.terminal.useJavaHome": true,
+  "java.home": "/Library/Java/JavaVirtualMachines/openjdk-14.0.2.jdk/Contents/Home"
+}
